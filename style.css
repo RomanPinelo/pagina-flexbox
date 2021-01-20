@@ -155,6 +155,24 @@ body {
   /* flex: flex-grow (Valor absoluto positivo)  flex-shrink (Valor absoluto positivo)  flex-basis (Valor absoluto o relativo); */
   background-color: #0F2027;
   flex: 0 0 25%; /* No quiero que crezca | No quiero que se reduzca | Ancho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aside__navegacion {
+  margin: 0 auto;
+  color: #FFF;
+}
+
+.aside__navegacion a {
+  text-decoration: none;
+  color: #01b19c;
+  margin-left: 2rem;
+}
+
+.aside__navegacion ul {
+  list-style: none;
 }
 
 .footer {
