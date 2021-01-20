@@ -21,7 +21,19 @@ En la parte inferior esta el Footer, solo hay información.
 
 ![1](https://user-images.githubusercontent.com/71656431/105220934-0b337400-5b1e-11eb-80ef-5f0794b81dde.jpg)
 
+Algunas imagenes de vistas en pantallas pequeñas:
+
+![2](https://user-images.githubusercontent.com/71656431/105222334-fce65780-5b1f-11eb-8d04-0ff6d8c0684c.jpg)
+
+
+![3](https://user-images.githubusercontent.com/71656431/105222375-07a0ec80-5b20-11eb-81e3-cccdd1c5bc6d.jpg)
+
+
+![4](https://user-images.githubusercontent.com/71656431/105222403-0cfe3700-5b20-11eb-80ff-406fc3f2bfff.jpg)
 
 En el siguiente link puedes ver la página funcionando: 
 
 https://romanpinelo.github.io/pagina-flexbox/
+
+
+**NOTA: En el CSS hay muchos comentarios. No se pusó atención en la estética o buenas prácticas. Se aclara para evitar comentarios negativos.**
