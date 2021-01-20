@@ -18,7 +18,7 @@ body {
 /* Flex-items */
 .header {
   /* outline: 1px solid gold; /* Borde que no ocupa espacio */
-  height: 3rem;
+  /* height: 3rem; */
 }
 
 .Menu {
@@ -135,7 +135,7 @@ body {
 }
 
 .content__background h3 {
-  margin: 3rem 12rem;
+  margin: 3rem 10rem;
   letter-spacing: 0.3rem;
   font-size: 2.75rem;
 }
@@ -169,6 +169,7 @@ body {
   text-decoration: none;
   color: #01b19c;
   margin-left: 2rem;
+  font-size: 1.5rem;
 }
 
 .aside__navegacion ul {
@@ -192,4 +193,34 @@ body {
 .footer p {
   font-size: 1rem;
   color: #FFF;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Menu {
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    flex-direction: column-reverse;
+  }
+  
+  .content__background h3 {
+    margin: 3rem 0rem;
+    font-size: 2.75rem;
+    text-align: center;
+  }
+  
+  .content__background p {
+    max-width: 85%;
+    margin: 0 auto 9rem;
+    text-align: justify;
+    letter-spacing: -0.1rem;
+    line-height: 3rem;
+  }
+  
+  .footer p {
+    text-align: center;
+  }
 }
