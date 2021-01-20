@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor */
+body {
+  display: flex;
+  height: 100vh;
+ /* flex-flow: flex-direction | flex-wrap; */
+  flex-flow: column;
+  font-size: 26px;
+  font-family: Muli, sans-serif;
+}
+
+
+/* Flex-items */
+.header {
+  /* outline: 1px solid gold; /* Borde que no ocupa espacio */
+  height: 3rem;
+}
+
+.Menu {
+  display: flex;
+}
+
+.Menu-item {
+  list-style: none;
+  flex: 1;  /* Ocupa todo el espacio disponible */
+  /* outline: 1px solid cyan;  /* Borde que no ocupa espacio */
+  line-height: 3rem; /* Con este truco el item abarca todo el alto del header y se centran los textos verticalmente. Solo es válido para cuando es una sola línea */
+  text-align: center;
+  transition: flex 0.5s; /* Le digo que la transición dure medio segundo */
+  color: #FFF;
+}
+
+.Menu-item:hover {
+  flex: 8; /* Con esto le indicó que al hacer hover crece el item */
+}
+
+.Menu-item a {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  border-left: 1px solid #FFF;
+}
+
+
+.Menu-item--home, .Menu-item--contact {
+  background: #0F2027;
+}
+
+.active {
+  color: #7fd8ff;
+}
+
+.Menu-item--gallery {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364, #2C5364);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0F2027, #203A43, #2C5364, #2C5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Menu-item--about {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+/* Un flex-item también puede ser un flex-container */
+.container {
+  display: flex;
+  height: calc(100vh - 6rem); /* El alto de la pantalla menos los 6rem en total del header y  
+                                 footer*/
+  overflow-x: hidden;
+}
+
+.content {
+  background-image: url(https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  /*outline: 1px solid cyan; /* Borde que no ocupa espacio */
+/* Automáticamente ocupa todo el ancho disponible */
+  flex: 1;
+/* Está la opcion de poner flex: 1 1 auto; */
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.content__background {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFF;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(0, 0, 0);
+}
+
+.content__background h2 {
+  text-align: center;
+  padding: 4rem 0;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  animation: animate 25s linear infinite;
+}
+
+@keyframes animate {
+  0% {transform: translateX(0%);}
+  16.66% {transform: translateX(-20%) rotate(-15deg) skewX(30deg);}
+  33.332% {transform: translateX(20%) rotate(15deg) skewX(-30deg);}
+  49.998% {transform: translateX(-15%) rotate(-10deg) skewX(25deg);}
+  66.664% {transform: translateX(15%) rotate(10deg) skewX(-25deg);}
+  83.33% {transform: translateX(-10%) rotate(-5deg) skewX(20deg);}
+  90% {transform: translateX(10%) rotate(5deg) skewX(-20deg);}
+  100% {transform: translateX(0%);}
+}
+
+.content__background h3 {
+  margin: 3rem 12rem;
+  letter-spacing: 0.3rem;
+  font-size: 2.75rem;
+}
+
+.content__background p {
+  max-width: 85%;
+  margin: 0 auto 9rem;
+  text-align: justify;
+  letter-spacing: 0.4rem;
+  line-height: 4rem;
+}
+
+
+
+.aside {
+  /* outline: 1px solid magenta; /* Borde que no ocupa espacio */
+  /* flex: flex-grow (Valor absoluto positivo)  flex-shrink (Valor absoluto positivo)  flex-basis (Valor absoluto o relativo); */
+  background-color: #0F2027;
+  flex: 0 0 25%; /* No quiero que crezca | No quiero que se reduzca | Ancho */
+}
+
+.footer {
+  /* background-color: salmon; */
+  /* outline: 1px solid salmon; /* Borde que no ocupa espacio */
+  height: 3rem;
+  /* Con un margin auto manda el footer al final de la pantalla */
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0F2027, #0F2027, #2C5364, #203A43, #0F2027, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0F2027, #0F2027, #2C5364, #203A43, #0F2027, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #FFF;
+}
